@@ -1,0 +1,448 @@
+{
+  "seed": 2026,
+  "table": {
+    "missing": {
+      "rows": 1000,
+      "per_column": {
+        "Age": 30,
+        "Salary_NPR": 30,
+        "Experience_Years": 34,
+        "Rating": 38,
+        "District": 41,
+        "Department": 29
+      },
+      "share_of_cells": 0.033666666666666664,
+      "rows_by_missing_values": {
+        "0": 816,
+        "1": 166,
+        "2": 18
+      },
+      "complete_rows": 816
+    },
+    "consistency": {
+      "rows_with_age_and_experience": 937,
+      "experience_above_age": 101,
+      "experience_above_age_minus_15": 338,
+      "join_dates_are_consecutive_days": true,
+      "first_join_date": "2000-01-01",
+      "last_join_date": "2002-09-26",
+      "largest_rank_correlation_between_numeric_columns": 0.06719683636704439,
+      "excess_kurtosis": {
+        "Age": -1.209083761942645,
+        "Salary_NPR": -1.261593985684425,
+        "Experience_Years": -1.1616924562817232,
+        "Rating": -1.1453811388336366
+      }
+    },
+    "relations_between_columns": {
+      "tests": 15,
+      "smallest_p": 0.03973388091197864,
+      "smallest_holm_p": 0.5960082136796796
+    },
+    "missingness_against_other_columns": {
+      "tests": 30,
+      "p_below_0.05": 3,
+      "smallest_p": 0.005393273876771177,
+      "smallest_p_is_for": "Department missing against Experience_Years",
+      "smallest_holm_p": 0.16179821630313532
+    }
+  },
+  "masking": {
+    "mean": {
+      "Age": 1.0068575029069493,
+      "Salary_NPR": 1.0030958010834072,
+      "Experience_Years": 0.996761111891126,
+      "Rating": 1.0188198603904743
+    },
+    "median": {
+      "Age": 1.0056868855684056,
+      "Salary_NPR": 1.0050484389136551,
+      "Experience_Years": 0.9989997219335491,
+      "Rating": 1.0178331486362062
+    },
+    "group mean": {
+      "Age": 1.0117978345160665,
+      "Salary_NPR": 1.0078491649619534,
+      "Experience_Years": 0.9997942114747086,
+      "Rating": 1.0231236136447384
+    },
+    "nearest neighbours": {
+      "Age": 1.0891438670261917,
+      "Salary_NPR": 1.0822850709740113,
+      "Experience_Years": 1.0750635762064837,
+      "Rating": 1.1185258603484214
+    },
+    "regression": {
+      "Age": 1.02111324438334,
+      "Salary_NPR": 1.0119200377473374,
+      "Experience_Years": 1.0026533762573693,
+      "Rating": 1.0364628422770588
+    },
+    "regression with noise": {
+      "Age": 1.4214272547579134,
+      "Salary_NPR": 1.3956374151495954,
+      "Experience_Years": 1.407899912039178,
+      "Rating": 1.4217621884809235
+    }
+  },
+  "categories": {
+    "District": {
+      "most_frequent": "Bhaktapur",
+      "its_share": 0.13764337851929093,
+      "chance_of_a_random_draw": 0.12542718616563786,
+      "its_share_after_filling_with_it": 0.173,
+      "methods": {
+        "most frequent": 0.13018039980497317,
+        "random draw": 0.12335446123842028,
+        "nearest neighbours": 0.14480741101901512
+      }
+    },
+    "Department": {
+      "most_frequent": "Finance",
+      "its_share": 0.23789907312049433,
+      "chance_of_a_random_draw": 0.20244876919862415,
+      "its_share_after_filling_with_it": 0.26,
+      "methods": {
+        "most frequent": 0.24489795918367346,
+        "random draw": 0.2030612244897959,
+        "nearest neighbours": 0.20714285714285716
+      }
+    }
+  },
+  "simulation": {
+    "truth": {
+      "mean": 64560.765799498586,
+      "sd": 25977.317322578656,
+      "correlation": 0.7083780502044342,
+      "slope": 2198.515365088111
+    },
+    "settings": {
+      "rows": 1000,
+      "tables": 300,
+      "share_missing": 0.3,
+      "imputations": 20
+    },
+    "MCAR": {
+      "complete cases": {
+        "rmse_in_sd": null,
+        "mean": 64565.2967392239,
+        "mean_bias": 4.5309397253149655,
+        "sd_ratio": 0.9990830763991283,
+        "correlation": 0.7087570861690343,
+        "slope_ratio": 1.000179354971368,
+        "coverage": 0.94
+      },
+      "mean": {
+        "rmse_in_sd": 0.9993404868532031,
+        "mean": 64565.2967392239,
+        "mean_bias": 4.5309397253149655,
+        "sd_ratio": 0.8366882119489549,
+        "correlation": 0.5933847332639126,
+        "slope_ratio": 0.7011439525769364,
+        "coverage": 0.8066666666666666
+      },
+      "group mean": {
+        "rmse_in_sd": 0.9152570036137156,
+        "mean": 64535.79282969076,
+        "mean_bias": -24.972969807822665,
+        "sd_ratio": 0.8663638120735442,
+        "correlation": 0.5732577129364419,
+        "slope_ratio": 0.7013539256355894,
+        "coverage": 0.8633333333333333
+      },
+      "nearest neighbours": {
+        "rmse_in_sd": 0.644209264212447,
+        "mean": 64475.03716775555,
+        "mean_bias": -85.72863174303347,
+        "sd_ratio": 0.9485484847100217,
+        "correlation": 0.7285550954549448,
+        "slope_ratio": 0.9757160056577957,
+        "coverage": 0.9
+      },
+      "regression": {
+        "rmse_in_sd": 0.5791185246810828,
+        "mean": 64554.96371001025,
+        "mean_bias": -5.802089488337515,
+        "sd_ratio": 0.9488879694112491,
+        "correlation": 0.7466306677763617,
+        "slope_ratio": 1.0002528865494522,
+        "coverage": 0.9033333333333333
+      },
+      "regression with noise": {
+        "rmse_in_sd": 0.8184174439156593,
+        "mean": 64543.34592073679,
+        "mean_bias": -17.41987876179337,
+        "sd_ratio": 1.0002840120903087,
+        "correlation": 0.7092886420518472,
+        "slope_ratio": 1.001735178592199,
+        "coverage": 0.8933333333333333
+      },
+      "multiple imputation": {
+        "rmse_in_sd": null,
+        "mean": 64548.51061578917,
+        "mean_bias": -12.255183709414268,
+        "sd_ratio": 1.0003425448419678,
+        "correlation": 0.7081935234222715,
+        "slope_ratio": 1.0002242345542385,
+        "coverage": 0.94
+      }
+    },
+    "MAR": {
+      "complete cases": {
+        "rmse_in_sd": null,
+        "mean": 57687.334799679295,
+        "mean_bias": -6873.430999819291,
+        "sd_ratio": 0.8752814055107899,
+        "correlation": 0.5935353346019984,
+        "slope_ratio": 1.0013734276808939,
+        "coverage": 0.0
+      },
+      "mean": {
+        "rmse_in_sd": 1.3305118113018444,
+        "mean": 57687.334799679295,
+        "mean_bias": -6873.430999819291,
+        "sd_ratio": 0.7319586813953975,
+        "correlation": 0.3639463061463622,
+        "slope_ratio": 0.3764992436735236,
+        "coverage": 0.0
+      },
+      "group mean": {
+        "rmse_in_sd": 1.2675229079660408,
+        "mean": 57700.09116944196,
+        "mean_bias": -6860.674630056623,
+        "sd_ratio": 0.7657382152463611,
+        "correlation": 0.34831281303177464,
+        "slope_ratio": 0.37689837790944525,
+        "coverage": 0.0
+      },
+      "nearest neighbours": {
+        "rmse_in_sd": 0.6994318170439275,
+        "mean": 63109.03673491869,
+        "mean_bias": -1451.729064579893,
+        "sd_ratio": 0.8921196473985421,
+        "correlation": 0.681795054710002,
+        "slope_ratio": 0.8590405021586944,
+        "coverage": 0.47
+      },
+      "regression": {
+        "rmse_in_sd": 0.5814642891353738,
+        "mean": 64561.736740905246,
+        "mean_bias": 0.9709414066601312,
+        "sd_ratio": 0.9492986058132941,
+        "correlation": 0.7473915767716166,
+        "slope_ratio": 1.001884741624442,
+        "coverage": 0.9
+      },
+      "regression with noise": {
+        "rmse_in_sd": 0.8230025444811526,
+        "mean": 64599.09034113164,
+        "mean_bias": 38.32454163305374,
+        "sd_ratio": 1.0016466532302735,
+        "correlation": 0.7094184522613611,
+        "slope_ratio": 1.0036636798446887,
+        "coverage": 0.89
+      },
+      "multiple imputation": {
+        "rmse_in_sd": null,
+        "mean": 64578.52301060766,
+        "mean_bias": 17.757211109077616,
+        "sd_ratio": 1.001689703077251,
+        "correlation": 0.7089037208326096,
+        "slope_ratio": 1.0029878455203136,
+        "coverage": 0.95
+      }
+    },
+    "MNAR": {
+      "complete cases": {
+        "rmse_in_sd": null,
+        "mean": 55663.66897033399,
+        "mean_bias": -8897.096829164599,
+        "sd_ratio": 0.8302739924596695,
+        "correlation": 0.6156280470931872,
+        "slope_ratio": 0.8551977001199351,
+        "coverage": 0.0
+      },
+      "mean": {
+        "rmse_in_sd": 1.4505161932749702,
+        "mean": 55663.66897033399,
+        "mean_bias": -8897.096829164599,
+        "sd_ratio": 0.694065245033382,
+        "correlation": 0.4345371577773225,
+        "slope_ratio": 0.4261291424706539,
+        "coverage": 0.0
+      },
+      "group mean": {
+        "rmse_in_sd": 1.3113019857419623,
+        "mean": 56809.6648083649,
+        "mean_bias": -7751.100991133688,
+        "sd_ratio": 0.7209706256615607,
+        "correlation": 0.4376521158738667,
+        "slope_ratio": 0.44578774447478076,
+        "coverage": 0.0
+      },
+      "nearest neighbours": {
+        "rmse_in_sd": 0.8242514021753269,
+        "mean": 60331.68297809202,
+        "mean_bias": -4229.082821406562,
+        "sd_ratio": 0.830635860942806,
+        "correlation": 0.6894248835871847,
+        "slope_ratio": 0.8087284223944725,
+        "coverage": 0.0033333333333333335
+      },
+      "regression": {
+        "rmse_in_sd": 0.6953819228695378,
+        "mean": 61179.556369307924,
+        "mean_bias": -3381.209430190662,
+        "sd_ratio": 0.8673531357426216,
+        "correlation": 0.7335157280727939,
+        "slope_ratio": 0.8983521653631454,
+        "coverage": 0.02
+      },
+      "regression with noise": {
+        "rmse_in_sd": 0.8878538321762347,
+        "mean": 61207.0541058176,
+        "mean_bias": -3353.7116936809834,
+        "sd_ratio": 0.9195987992612199,
+        "correlation": 0.6923430114460128,
+        "slope_ratio": 0.8990804114724915,
+        "coverage": 0.03666666666666667
+      },
+      "multiple imputation": {
+        "rmse_in_sd": null,
+        "mean": 61184.50632575768,
+        "mean_bias": -3376.259473740909,
+        "sd_ratio": 0.9191702941227702,
+        "correlation": 0.6924723539456382,
+        "slope_ratio": 0.898887907483355,
+        "coverage": 0.043333333333333335
+      }
+    }
+  },
+  "polygon": {
+    "file_crs": "EPSG:24047 (Indian 1975 / UTM zone 47N)",
+    "vertices": 279,
+    "longitude": 84.91393382537261,
+    "latitude": 27.585561626788802,
+    "geodesic_area_m2": 218630.21150956655,
+    "degrees_from_the_central_meridian_of_the_file_crs": 14.08606617462739,
+    "area_factor_of_the_file_crs_at_the_polygon": 1.0482249184092063,
+    "systems": [
+      {
+        "system": "as stored: Indian 1975 / UTM zone 47N",
+        "area_m2": 229174.71775128404,
+        "ratio": 1.0482298679990807
+      },
+      {
+        "system": "WGS 84 / UTM zone 44N",
+        "area_m2": 219262.16314338538,
+        "ratio": 1.002890504608011
+      },
+      {
+        "system": "WGS 84 / UTM zone 45N",
+        "area_m2": 218684.13503257427,
+        "ratio": 1.000246642596352
+      },
+      {
+        "system": "transverse Mercator, central meridian 84 °E, scale 0.9999",
+        "area_m2": 218630.43070768507,
+        "ratio": 1.0000010025975687
+      },
+      {
+        "system": "Web Mercator",
+        "area_m2": 279381.23682207335,
+        "ratio": 1.277871136349555
+      },
+      {
+        "system": "equal-area cylindrical (EPSG:6933)",
+        "area_m2": 218629.2059651819,
+        "ratio": 0.9999954007070765
+      }
+    ]
+  },
+  "countries": {
+    "countries": 177,
+    "source": "Natural Earth 1:110m",
+    "vertex_spacing_deg": 0.1,
+    "km2_per_square_degree": {
+      "smallest": 2046.3938970522706,
+      "largest": 12304.87413414263,
+      "Nepal": 10875.15672337774
+    },
+    "web_mercator": {
+      "left_out": [
+        "Antarctica"
+      ],
+      "smallest_ratio": 1.0074365067229474,
+      "smallest_is": "Gabon",
+      "median_ratio": 1.2116480100412792,
+      "largest_ratio": 16.438109702666676,
+      "largest_is": "Greenland",
+      "examples": {
+        "Nepal": 1.293700397779381,
+        "India": 1.1972658354336458,
+        "Brazil": 1.0647835968233108,
+        "Russia": 4.883940591842227,
+        "Canada": 5.1969306502046875,
+        "Norway with Svalbard": 9.339373767848464,
+        "Greenland": 16.438109702666676
+      }
+    },
+    "equal_area_cylindrical": {
+      "largest_departure_from_1": 1.3434023777292303e-05
+    },
+    "utm_zone_45n": {
+      "within_1_percent": [
+        "El Salvador",
+        "Guatemala",
+        "Belize",
+        "Bangladesh",
+        "Bhutan",
+        "Nepal"
+      ],
+      "off_by_more_than_half": 98,
+      "not_computable": [
+        "Benin",
+        "Togo",
+        "Ghana",
+        "Côte d'Ivoire",
+        "Liberia"
+      ],
+      "largest_ratio": 82.79553195813851,
+      "largest_is": "Ecuador",
+      "examples": {
+        "Nepal": 1.0023778158697394,
+        "India": 1.022762608966873,
+        "China": 1.0947311919855474,
+        "Germany": 1.5980683372283484,
+        "Australia": 1.88279106331544,
+        "Brazil": 10.527452957599566
+      }
+    }
+  },
+  "nepal_zones": {
+    "latitude": 28.0,
+    "longitudes": [
+      80.06,
+      88.2
+    ],
+    "utm_44n": {
+      "at_the_west_end": -0.0005890446656369175,
+      "at_84_e": 0.0013496181616383662,
+      "at_the_east_end": 0.01165373518441637
+    },
+    "utm_45n": {
+      "at_the_west_end": 0.010764733407100824,
+      "at_84_e": 0.0013496181616685643,
+      "at_the_east_end": -0.0004562814463270337
+    },
+    "utm_zone_by_longitude": {
+      "lowest": -0.0007998400126997263,
+      "highest": 0.0013496181616685643
+    },
+    "three_degree_zones": {
+      "lowest": -0.0001999900122163778,
+      "highest": 0.0003372018951104394
+    },
+    "web_mercator": 0.287551871466319
+  }
+}
