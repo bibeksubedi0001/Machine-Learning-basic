@@ -99,12 +99,12 @@ Produced by `python run_analysis.py`; all tables are in [results/summary.md](res
 RMS error of the filled values, in standard deviations of the column (range over the four
 numeric columns):
 
-| Method | Error | Expected when columns are unrelated |
-|---|---|---|
-| mean, median, mean of the department | 1.00 to 1.02 | 1 |
-| regression | 1.00 to 1.04 | 1 |
-| 5 nearest rows | 1.08 to 1.12 | √(1 + 1/5) = 1.10 |
-| regression with noise | 1.40 to 1.42 | √2 = 1.41 |
+| Method                               | Error        | Expected when columns are unrelated |
+| ------------------------------------ | ------------ | ----------------------------------- |
+| mean, median, mean of the department | 1.00 to 1.02 | 1                                   |
+| regression                           | 1.00 to 1.04 | 1                                   |
+| 5 nearest rows                       | 1.08 to 1.12 | √(1 + 1/5) = 1.10                   |
+| regression with noise                | 1.40 to 1.42 | √2 = 1.41                           |
 
 Hidden categories are filled correctly as often as the largest group is large: the most
 frequent value is right for 13.0 % of the districts and 24.5 % of the departments (the largest
@@ -122,27 +122,27 @@ tables a share of 95 % has a standard error of 1.3 points.
 
 Salaries missing completely at random (MCAR):
 
-| Method | Error of the filled values (SD) | Mean minus truth (NPR) | SD / truth | Correlation | Slope / truth | Intervals with the truth |
-|---|---|---|---|---|---|---|
-| complete rows only | - | +5 | 1.00 | 0.709 | 1.00 | 94 % |
-| mean | 1.00 | +5 | 0.84 | 0.593 | 0.70 | 81 % |
-| mean of the department | 0.92 | -25 | 0.87 | 0.573 | 0.70 | 86 % |
-| 5 nearest rows | 0.64 | -86 | 0.95 | 0.729 | 0.98 | 90 % |
-| regression | 0.58 | -6 | 0.95 | 0.747 | 1.00 | 90 % |
-| regression with noise | 0.82 | -17 | 1.00 | 0.709 | 1.00 | 89 % |
-| multiple imputation | - | -12 | 1.00 | 0.708 | 1.00 | 94 % |
+| Method                 | Error of the filled values (SD) | Mean minus truth (NPR) | SD / truth | Correlation | Slope / truth | Intervals with the truth |
+| ---------------------- | ------------------------------- | ---------------------- | ---------- | ----------- | ------------- | ------------------------ |
+| complete rows only     | -                               | +5                     | 1.00       | 0.709       | 1.00          | 94 %                     |
+| mean                   | 1.00                            | +5                     | 0.84       | 0.593       | 0.70          | 81 %                     |
+| mean of the department | 0.92                            | -25                    | 0.87       | 0.573       | 0.70          | 86 %                     |
+| 5 nearest rows         | 0.64                            | -86                    | 0.95       | 0.729       | 0.98          | 90 %                     |
+| regression             | 0.58                            | -6                     | 0.95       | 0.747       | 1.00          | 90 %                     |
+| regression with noise  | 0.82                            | -17                    | 1.00       | 0.709       | 1.00          | 89 %                     |
+| multiple imputation    | -                               | -12                    | 1.00       | 0.708       | 1.00          | 94 %                     |
 
 Salaries missing more often for staff with long experience (MAR):
 
-| Method | Error of the filled values (SD) | Mean minus truth (NPR) | SD / truth | Correlation | Slope / truth | Intervals with the truth |
-|---|---|---|---|---|---|---|
-| complete rows only | - | -6,873 | 0.88 | 0.594 | 1.00 | 0 % |
-| mean | 1.33 | -6,873 | 0.73 | 0.364 | 0.38 | 0 % |
-| mean of the department | 1.27 | -6,861 | 0.77 | 0.348 | 0.38 | 0 % |
-| 5 nearest rows | 0.70 | -1,452 | 0.89 | 0.682 | 0.86 | 47 % |
-| regression | 0.58 | +1 | 0.95 | 0.747 | 1.00 | 90 % |
-| regression with noise | 0.82 | +38 | 1.00 | 0.709 | 1.00 | 89 % |
-| multiple imputation | - | +18 | 1.00 | 0.709 | 1.00 | 95 % |
+| Method                 | Error of the filled values (SD) | Mean minus truth (NPR) | SD / truth | Correlation | Slope / truth | Intervals with the truth |
+| ---------------------- | ------------------------------- | ---------------------- | ---------- | ----------- | ------------- | ------------------------ |
+| complete rows only     | -                               | -6,873                 | 0.88       | 0.594       | 1.00          | 0 %                      |
+| mean                   | 1.33                            | -6,873                 | 0.73       | 0.364       | 0.38          | 0 %                      |
+| mean of the department | 1.27                            | -6,861                 | 0.77       | 0.348       | 0.38          | 0 %                      |
+| 5 nearest rows         | 0.70                            | -1,452                 | 0.89       | 0.682       | 0.86          | 47 %                     |
+| regression             | 0.58                            | +1                     | 0.95       | 0.747       | 1.00          | 90 %                     |
+| regression with noise  | 0.82                            | +38                    | 1.00       | 0.709       | 1.00          | 89 %                     |
+| multiple imputation    | -                               | +18                    | 1.00       | 0.709       | 1.00          | 95 %                     |
 
 - **Filling with the mean keeps the mean and damages the rest.** With 30 % of the values at the
   mean, the standard deviation falls to 0.84 of the truth (√0.7), the correlation with
@@ -167,14 +167,14 @@ Salaries missing more often for staff with long experience (MAR):
 
 ![Area of the polygon by coordinate system](figures/polygon_area.png)
 
-| Coordinate system | Area (m²) | Difference from the area on the ellipsoid |
-|---|---|---|
-| as stored: Indian 1975 / UTM zone 47N | 229,175 | +4.82 % |
-| WGS 84 / UTM zone 44N | 219,262 | +0.29 % |
-| WGS 84 / UTM zone 45N | 218,684 | +0.02 % |
-| transverse Mercator, central meridian 84 °E, scale 0.9999 | 218,630 | 0.00 % |
-| Web Mercator | 279,381 | +27.79 % |
-| equal-area cylindrical (EPSG:6933) | 218,629 | 0.00 % |
+| Coordinate system                                         | Area (m²) | Difference from the area on the ellipsoid |
+| --------------------------------------------------------- | --------- | ----------------------------------------- |
+| as stored: Indian 1975 / UTM zone 47N                     | 229,175   | +4.82 %                                   |
+| WGS 84 / UTM zone 44N                                     | 219,262   | +0.29 %                                   |
+| WGS 84 / UTM zone 45N                                     | 218,684   | +0.02 %                                   |
+| transverse Mercator, central meridian 84 °E, scale 0.9999 | 218,630   | 0.00 %                                    |
+| Web Mercator                                              | 279,381   | +27.79 %                                  |
+| equal-area cylindrical (EPSG:6933)                        | 218,629   | 0.00 %                                    |
 
 The area on the ellipsoid is 218,630 m². The coordinates as stored give 229,175 m², 4.82 % too
 much, because the polygon is 14.1° from the central meridian of its system. In UTM zone 45N,
